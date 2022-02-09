@@ -40,7 +40,7 @@ OPTIONS (
   uris = ['gs://dtc_data_lake_supple-snow-338713/raw/fhv_tripdata_2019-*.parquet']
 );
 
-select * from `supple-snow-338713.nytaxi.external_fhv_tripdata` LIMIT 50;
+select count(*) from `supple-snow-338713.nytaxi.external_fhv_tripdata`;
 
 --Count of distinct dispatching_base_num
 select count(distinct dispatching_base_num) from `supple-snow-338713.nytaxi.external_fhv_tripdata`;
